@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int num =122221;
+    int multi = 10;
+    int value = 0;
+    for(int i = num;i>0;){
+        int temp = i%10;
+        int div = i/10;
+        value = (value*multi)+temp;
+        i=div;        
+    }
+    if(value == num) {
+        cout<<"Palindrom"<<endl;
+    }
+    else {
+        cout<<"Not Palindorm"<<endl;
+    }
+    return 0;
+}

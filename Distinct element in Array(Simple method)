@@ -1,0 +1,32 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class distinct {
+    public:
+        void function(vector<int> &arr) {
+            int cou = 1;
+            for(int first = 0; first< arr.size(); first++) {
+                for(int second = 0; second<first;second++) {
+                    if(arr[first] != arr[second]) {
+                        cou++;
+                    }
+                    break;
+                }
+            }
+            cout<<"the total number of element are : "<<cou<<endl;
+            
+        }
+
+};
+int main() {
+    vector<int>  v;
+    v.push_back(5);
+    v.push_back(5);
+    v.push_back(6);
+    v.push_back(7);
+    v.push_back(8);
+    v.push_back(9);
+    distinct obj;
+    obj.function(v);
+}
